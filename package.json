@@ -1,0 +1,22 @@
+{
+	"name": "ccez-vanilla-ts",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"copyManifest": "node -e \"require('fs').cpSync('./manifest.json', './dist/manifest.json', {recursive: false});\"",
+		"build": "tsc -p . && npm run copyManifest"
+	},
+	"repository": "https://github.com/christophe77/ccez-vanilla-ts",
+	"author": "christophe77 <chrisb@gmx.fr>",
+	"license": "MIT",
+	"keywords": [
+		"chrome",
+		"extension",
+		"react",
+		"typescript"
+	],
+	"devDependencies": {
+		"@types/chrome": "^0.0.306",
+		"typescript": "^5.0.0"
+	}
+}

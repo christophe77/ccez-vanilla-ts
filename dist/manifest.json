@@ -1,0 +1,24 @@
+{
+	"manifest_version": 3,
+	"name": "TypeScript Chrome ExtensionZ",
+	"version": "1.0",
+	"description": "ccez-vanilla-ts",
+	"permissions": ["storage", "activeTab"],
+	"background": {
+		"service_worker": "dist/background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["dist/content.js"]
+		}
+	],
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "icon.jpg",
+			"48": "icon.jpg",
+			"128": "icon.jpg"
+		}
+	}
+}
